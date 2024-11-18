@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>My Interactive Page</title>
+</head>
+<body>
+    <h1 id="myHeading">Welcome to JavaScript!</h1>
+    <button id="changeTextButton">Click Me!</button>
+    <button id="hoverButton">Hover Over Me!</button>
+    <button id="counterButton">Click Count: 0</button>
+    <script>
+        // Your JavaScript will go here
+        console.log("Hello from JavaScript!");
+        // Get the button element
+        const button = document.getElementById("changeTextButton");
+        const heading = document.getElementById("myHeading");
+
+        // Add click functionality
+        button.addEventListener("click", function() {
+        heading.innerHTML = "Text Changed!";
+        });
+        // Get the hover button
+        const hoverButton = document.getElementById("hoverButton");
+
+        // Add hover effects
+        hoverButton.addEventListener("mouseover", function() {
+        hoverButton.style.backgroundColor = "yellow";
+        });
+
+        hoverButton.addEventListener("mouseout", function() {
+        hoverButton.style.backgroundColor = "white";
+        });
+        // Get the counter button
+        const counterButton = document.getElementById("counterButton");
+        let clickCount = 0;
+
+        // Add counter functionality
+        counterButton.addEventListener("click", function() {
+        clickCount = clickCount + 1;
+        counterButton.innerHTML = "Click Count: " + clickCount;
+        });
+    </script>
+</body>
+</html>
